@@ -2,12 +2,12 @@ package router
 
 import "github.com/gin-gonic/gin"
 
-func Initialize() {
+func Init() {
 	// INITIALIZE ROUTER
 	router := gin.Default()
 
 	// INITIALIZE ROUTES
-	initializeRoutes(router)
+	initRoutes(router)
 
 	// RUN THE SERVER
 	router.Run()

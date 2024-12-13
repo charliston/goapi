@@ -1,9 +1,18 @@
 package main
 
-import r "github.com/charliston/goapi/router"
+import (
+	"github.com/charliston/goapi/config"
+	"github.com/charliston/goapi/router"
+)
+
+var (
+	logger *config.Logger
+)
 
 func main() {
-	// init router
-	r.Initialize()
+	logger = config.GetLogger("main")
+
+	// INITIALIZE ROUTES
+	router.Init()
 
 }
